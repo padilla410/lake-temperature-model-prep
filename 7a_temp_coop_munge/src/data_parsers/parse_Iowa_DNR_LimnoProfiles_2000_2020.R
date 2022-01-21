@@ -280,7 +280,7 @@ parse_2017_2020_data <- function(x, keep_cols, lakeid_col, temp_as_f = F, use_re
   } else if (use_readr){
     dat <- readr::read_csv(x)
   } else {
-    dat <- read.csv(x)
+    dat <- read.csv(x, fileEncoding="latin1")
   }
 
   # select key columns, normalize
